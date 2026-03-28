@@ -13,7 +13,7 @@ List<string> nombrePacientes = new List<string>();
 
 bool exit = false;
 bool repeat = false;
-while (system );
+
 
 {
     string Options =  "Please Enter The Number Do You Want\n" +
@@ -22,38 +22,23 @@ while (system );
                      "3. Search Patients\n" +
                      "4.Exit\n";
     Console.WriteLine(Options);
-//var User = Console.ReadLine();
+
 
     ConsoleKeyInfo choose = new ConsoleKeyInfo();
 
     choose = Console.ReadKey(true);
 
 
-    switch (choose.Key)
+    switch (choose.Key )
     {
         case ConsoleKey.D1:
         {
             Console.WriteLine("Enter Data Of Patient");
             string paciente = Console.ReadLine();
-            ;
-            if (!string.IsNullOrEmpty(paciente))
-            {
-                Console.WriteLine(Options);
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.WriteLine(Options);
-            }
             nombrePacientes.Add(paciente);
             Console.Clear();
             Console.WriteLine(Options);
-            
-            //if (paciente == "paciente")
-            //{
-              //  continue;
-            //}
-            //Console.WriteLine(Options);
+            repeat = true;
             break;
         }
 
